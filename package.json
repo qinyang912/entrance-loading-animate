@@ -1,0 +1,11 @@
+{
+  "name": "entrance-loading-animate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "entrance-loading-animate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
