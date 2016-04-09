@@ -2,7 +2,7 @@
 * @Author: qin yang
 * @Date:   2016-04-08 22:25:30
 * @Last Modified by:   qin yang
-* @Last Modified time: 2016-04-08 22:32:45
+* @Last Modified time: 2016-04-09 12:12:08
 */
 (function (h, j) {
   function f (p, q) {
@@ -299,4 +299,3 @@
     }
   }
 })(window, document);
-RsqLoading.start();
