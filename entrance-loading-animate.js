@@ -2,7 +2,7 @@
 * @Author: qin yang
 * @Date:   2016-04-08 22:25:30
 * @Last Modified by:   qin yang
-* @Last Modified time: 2016-04-09 12:37:28
+* @Last Modified time: 2016-04-09 13:18:23
 */
 (function (h, j) {
   function f (p, q) {
@@ -203,7 +203,7 @@
     while (this.element.firstChild) {
       this.element.removeChild(this.element.firstChild)
     }
-    this.element.remove();
+    this.element.style.display = 'none';
   };
   function m (p) {
     this.plan = p;
