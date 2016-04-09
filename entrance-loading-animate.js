@@ -2,7 +2,7 @@
 * @Author: qin yang
 * @Date:   2016-04-08 22:25:30
 * @Last Modified by:   qin yang
-* @Last Modified time: 2016-04-09 12:12:08
+* @Last Modified time: 2016-04-09 12:37:28
 */
 (function (h, j) {
   function f (p, q) {
@@ -250,49 +250,49 @@
     o.stop();
     o.destroy()
   }
-
-  var o = new d(h, {element: j.getElementById("entrance-loading-animate")});
-  var k = {
-    initElement: [{
-      typeFunction: a,
-      size: [50, 24.5],
-      pos: [o.center.x - 150, o.center.y - 10],
-      speed: [0, 50]
-    }, {typeFunction: a, size: [80, 39.2], pos: [o.center.x + 100, o.center.y - 100], speed: [0, 50]}, {
-      typeFunction: c,
-      size: [5, 5],
-      pos: [o.left + 100, o.bottom - 200],
-      speed: [0, 50]
-    }, {typeFunction: c, size: [8, 8], pos: [o.center.x - 100, o.center.y + 20], speed: [0, 50]}, {
-      typeFunction: i,
-      size: [115, 170],
-      pos: [o.center.x, o.center.y],
-      speed: [0.5, 0]
-    }, {typeFunction: n, size: [30, 30], pos: [o.left + 160, o.top + 160], speed: [0, 0]}, {
-      typeFunction: g,
-      size: [2, 2],
-      pos: [o.left + 174, o.top + 174],
-      speed: [0, 0],
-      shadowSize: 20,
-      shadowSpeed: 6,
-      shadowColor: "#e9e9eb"
-    }],
-    genElement: [{
-      typeFunction: a,
-      generatorInterval: 2000,
-      size: {scope: [30, 100], ratio: 0.49},
-      pos: {scope: [[o.left + 10, o.right - 110], [0, 0]]},
-      speed: {scope: [[0, 0], [50, 100]]}
-    }, {
-      typeFunction: c,
-      generatorInterval: 1500,
-      size: {scope: [5, 15], ratio: 1},
-      pos: {scope: [[o.left + 10, o.right - 25], [0, 0]]},
-      speed: {scope: [[0, 0], [20, 50]]}
-    }]
-  };
+  var o;
   h.RsqLoading = {
-    start: function () {
+    start: function (id) {
+      o = new d(h, {element: j.getElementById(id)});
+      var k = {
+        initElement: [{
+          typeFunction: a,
+          size: [50, 24.5],
+          pos: [o.center.x - 150, o.center.y - 10],
+          speed: [0, 50]
+        }, {typeFunction: a, size: [80, 39.2], pos: [o.center.x + 100, o.center.y - 100], speed: [0, 50]}, {
+          typeFunction: c,
+          size: [5, 5],
+          pos: [o.left + 100, o.bottom - 200],
+          speed: [0, 50]
+        }, {typeFunction: c, size: [8, 8], pos: [o.center.x - 100, o.center.y + 20], speed: [0, 50]}, {
+          typeFunction: i,
+          size: [115, 170],
+          pos: [o.center.x, o.center.y],
+          speed: [0.5, 0]
+        }, {typeFunction: n, size: [30, 30], pos: [o.left + 160, o.top + 160], speed: [0, 0]}, {
+          typeFunction: g,
+          size: [2, 2],
+          pos: [o.left + 174, o.top + 174],
+          speed: [0, 0],
+          shadowSize: 20,
+          shadowSpeed: 6,
+          shadowColor: "#e9e9eb"
+        }],
+        genElement: [{
+          typeFunction: a,
+          generatorInterval: 2000,
+          size: {scope: [30, 100], ratio: 0.49},
+          pos: {scope: [[o.left + 10, o.right - 110], [0, 0]]},
+          speed: {scope: [[0, 0], [50, 100]]}
+        }, {
+          typeFunction: c,
+          generatorInterval: 1500,
+          size: {scope: [5, 15], ratio: 1},
+          pos: {scope: [[o.left + 10, o.right - 25], [0, 0]]},
+          speed: {scope: [[0, 0], [20, 50]]}
+        }]
+      };
       b(k)
     }, stop: function () {
       l()
